@@ -1,0 +1,8 @@
+**/.ipynb_checkpoints/**
+**/__pycache__/**
+**/.config/**
+Solution/script/data/**
+Ressources/data/**
+**/checkpoint/**
+Solution/api.env
+Ressource/archive.zip

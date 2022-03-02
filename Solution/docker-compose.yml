@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+    projet9-oc:
+        container_name: projet9-oc
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        restart: always
+        env_file: api.env
+        volumes:
+          - ./script:/app/script
+        command: jupyter notebook --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.token='superPassword1234'
+        ports:
+          - "8888:8888"
+        networks:
+            - p9-network
+           
+        deploy:
+          resources:
+            reservations:
+              devices:
+              - driver: nvidia
+                device_ids: ['0','1']
+                capabilities: [gpu]
+            
+networks:
+    p9-network:
+        driver: bridge

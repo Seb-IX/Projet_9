@@ -1,0 +1,12 @@
+keras
+pillow
+pandas
+matplotlib
+numpy
+requests
+notebook
+ipywidgets
+pyarrow
+sklearn
+azureml.core
+scikit-surprise
