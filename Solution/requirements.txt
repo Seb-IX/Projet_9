@@ -10,3 +10,5 @@ pyarrow
 sklearn
 azureml.core
 scikit-surprise
+seaborn
+implicit
